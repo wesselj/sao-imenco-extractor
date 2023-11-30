@@ -1,0 +1,87 @@
+imenco_config:
+    interval: 1
+    paths: [
+        'http://192.168.130.12:3000/sensordata',
+        'http://192.168.130.22:3000/sensordata',
+        'http://192.168.130.32:3000/sensordata',
+        'http://192.168.130.42:3000/sensordata',
+        'http://192.168.130.52:3000/sensordata',
+        'http://192.168.130.62:3000/sensordata',
+        'http://192.168.130.72:3000/sensordata',
+        'http://192.168.130.92:3000/sensordata',
+        'http://192.168.130.102:3000/sensordata',
+        'http://192.168.130.112:3000/sensordata',
+        'http://192.168.130.122:3000/sensordata'
+    ]
+    next_paths: {
+        'http://192.168.130.12:3000/sensordata' : 'http://192.168.130.22:3000/sensordata', 
+        'http://192.168.130.22:3000/sensordata' : 'http://192.168.130.32:3000/sensordata', 
+        'http://192.168.130.32:3000/sensordata' : 'http://192.168.130.42:3000/sensordata', 
+        'http://192.168.130.42:3000/sensordata' : 'http://192.168.130.52:3000/sensordata', 
+        'http://192.168.130.52:3000/sensordata' : 'http://192.168.130.62:3000/sensordata', 
+        'http://192.168.130.62:3000/sensordata' : 'http://192.168.130.72:3000/sensordata', 
+        'http://192.168.130.72:3000/sensordata' : 'http://192.168.130.92:3000/sensordata',
+        'http://192.168.130.92:3000/sensordata' : 'http://192.168.130.102:3000/sensordata', 
+        'http://192.168.130.102:3000/sensordata' : 'http://192.168.130.112:3000/sensordata', 
+        'http://192.168.130.112:3000/sensordata' : 'http://192.168.130.122:3000/sensordata', 
+        'http://192.168.130.122:3000/sensordata' : 'http://192.168.130.12:3000/sensordata' 
+    }
+    imenco_path_to_camera_name_map: {
+        'http://192.168.130.12:3000/sensordata': 'Pixelite_CCU_C1-C1',
+        'http://192.168.130.22:3000/sensordata': 'Pixelite_CCU_C1-C2',
+        'http://192.168.130.32:3000/sensordata': 'Pixelite_CCU_C1-C3',
+        'http://192.168.130.42:3000/sensordata': 'Pixelite_CCU_C4-C1',
+        'http://192.168.130.52:3000/sensordata': 'Pixelite_CCU_C4-C2',
+        'http://192.168.130.62:3000/sensordata': 'Pixelite_CCU_C4-C3',
+        'http://192.168.130.72:3000/sensordata': 'Pixelite_CCU_C7-C1',
+        # 'http://192.168.130.82:3000/sensordata': 'Pixelite_CCU_C7-C2',
+        'http://192.168.130.92:3000/sensordata': 'Pixelite_CCU_C7-C3',
+        'http://192.168.130.102:3000/sensordata': 'Pixelite_CCU_C10-C1',
+        'http://192.168.130.112:3000/sensordata': 'Pixelite_CCU_C10-C2',
+        'http://192.168.130.122:3000/sensordata': 'Pixelite_CCU_C10-C3'
+    }
+
+imenco_test_config:
+    interval: 1
+    paths: [
+        'http://host.docker.internal:3000/sensordata',
+        'http://host.docker.internal:3001/sensordata',
+        'http://host.docker.internal:3002/sensordata',
+        'http://host.docker.internal:3003/sensordata',
+        'http://host.docker.internal:3004/sensordata',
+        'http://host.docker.internal:3005/sensordata',
+        'http://host.docker.internal:3006/sensordata',
+        'http://host.docker.internal:3007/sensordata',
+        'http://host.docker.internal:3008/sensordata',
+        'http://host.docker.internal:3009/sensordata',
+        'http://host.docker.internal:3010/sensordata',
+        'http://host.docker.internal:3011/sensordata'
+    ]
+    next_paths: {
+        'http://host.docker.internal:3000/sensordata' : 'http://host.docker.internal:3001/sensordata', 
+        'http://host.docker.internal:3001/sensordata' : 'http://host.docker.internal:3002/sensordata', 
+        'http://host.docker.internal:3002/sensordata' : 'http://host.docker.internal:3003/sensordata', 
+        'http://host.docker.internal:3003/sensordata' : 'http://host.docker.internal:3004/sensordata', 
+        'http://host.docker.internal:3004/sensordata' : 'http://host.docker.internal:3005/sensordata', 
+        'http://host.docker.internal:3005/sensordata' : 'http://host.docker.internal:3006/sensordata', 
+        'http://host.docker.internal:3006/sensordata' : 'http://host.docker.internal:3007/sensordata', 
+        'http://host.docker.internal:3007/sensordata' : 'http://host.docker.internal:3008/sensordata', 
+        'http://host.docker.internal:3008/sensordata' : 'http://host.docker.internal:3009/sensordata', 
+        'http://host.docker.internal:3009/sensordata' : 'http://host.docker.internal:3010/sensordata', 
+        'http://host.docker.internal:3010/sensordata' : 'http://host.docker.internal:3011/sensordata', 
+        'http://host.docker.internal:3011/sensordata' : 'http://host.docker.internal:3000/sensordata' 
+    }
+    imenco_path_to_camera_name_map : {
+        'http://host.docker.internal:3000/sensordata': 'Pixelite_CCU_C1-C1',
+        'http://host.docker.internal:3001/sensordata': 'Pixelite_CCU_C1-C2',
+        'http://host.docker.internal:3002/sensordata': 'Pixelite_CCU_C1-C3',
+        'http://host.docker.internal:3003/sensordata': 'Pixelite_CCU_C4-C1',
+        'http://host.docker.internal:3004/sensordata': 'Pixelite_CCU_C4-C2',
+        'http://host.docker.internal:3005/sensordata': 'Pixelite_CCU_C4-C3',
+        'http://host.docker.internal:3006/sensordata': 'Pixelite_CCU_C7-C1',
+        'http://host.docker.internal:3007/sensordata': 'Pixelite_CCU_C7-C2',
+        'http://host.docker.internal:3008/sensordata': 'Pixelite_CCU_C7-C3',
+        'http://host.docker.internal:3009/sensordata': 'Pixelite_CCU_C10-C1',
+        'http://host.docker.internal:3010/sensordata': 'Pixelite_CCU_C10-C2',
+        'http://host.docker.internal:3011/sensordata': 'Pixelite_CCU_C10-C3'
+    }
